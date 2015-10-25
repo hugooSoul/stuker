@@ -18,6 +18,8 @@ gem 'dotenv-rails', groups: [:development]
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'validates_timeliness', '~> 3.0'
+gem 'momentjs-rails', '~> 2.9', github: 'derekprior/momentjs-rails'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
