@@ -24,7 +24,7 @@ gem 'twitter'
 gem "koala"
 gem 'delayed_job_active_record'
 gem 'delayed-web', github: 'thebestday/delayed-web'
-
+gem 'will_paginate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
