@@ -19,12 +19,14 @@ class Post < ActiveRecord::Base
 
 	def display
 		begin
-			if facebook == true
-				to_facebook
+			unless state == "canceled"
+				if facebook == true
+					to_facebook
+				end
+				if twitter == true
+					to_twitter
+				end 
 			end
-			if twitter == true
-				to_twitter
-			end 
 			self.update_attributes(state: "posted")
 		rescue Exception => e
 			self.update_attributes(state: "posting error", error: e.message)
